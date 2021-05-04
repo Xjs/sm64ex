@@ -13,7 +13,7 @@ endif
 
 CC := gcc
 CXX := g++
-CFLAGS := -Llib -Iinclude -I../include -I . -Wall -Wextra -Wno-unused-parameter $(OSX_BUILD) -pedantic -std=c99 $(OPT_FLAG) -s
+CFLAGS := -Llib -Iinclude -I/opt/homebrew/include -I../include -I . -Wall -Wextra -Wno-unused-parameter -Wno-error=implicit-function-declaration $(OSX_BUILD) -pedantic -std=c99 $(OPT_FLAG) -s
 PROGRAMS := n64graphics n64graphics_ci mio0 n64cksum textconv patch_libultra_math iplfontutil aifc_decode aiff_extract_codebook vadpcm_enc tabledesign extract_data_for_mio skyconv
 
 n64graphics_SOURCES := n64graphics.c utils.c
